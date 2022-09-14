@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-toolbar color="primary"  style="text-align: center;" mode='ios'>
+    <ion-title>Moji Town</ion-title>
+  </ion-toolbar>
+  <div class="login-header ion-padding">
+    <img src="assets/mojitown.png" class="logo-img">
+  </div>
+</ion-header>
+<ion-content>
+  <div class="center">
+
+    <div heading-column-lr>
+
+      <h1 big-heading color="primary">Iniciar Sesión</h1>
+     
+
+    </div>
+<ion-item transparent>
+  <img src="assets/user.png" icon-small>
+  <ion-input #email type="text" placeholder="Email"></ion-input>
+</ion-item>
+<ion-item transparent>
+  <img src="assets/candado.png" icon-small>
+  <ion-input #password  type="password" placeholder="Contraseña"></ion-input>
+
+</ion-item>
+
+<div linespace></div>
+<ion-button type="submit" (click)="onLogin(email, password)" expand="block">Login</ion-button>
+</div>
+

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar mode='ios' color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='../administracion'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Producto </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre: </ion-label>
+    <ion-input [(ngModel)]="Producto.nombre" type="text" placeholder="Nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descripción: </ion-label>
+    <ion-input [(ngModel)]="Producto.descripcion" type="text" placeholder="Descripción"></ion-input>
+  </ion-item>
+  <ion-item>
+    <input style="left: 0px;" type="file" name="inputFile" (change)="chooseFile($event)" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Precio: </ion-label>
+    <ion-input [(ngModel)]="Producto.precio" type="text" placeholder=""></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Categoria: </ion-label>
+    <ion-select placeholder="Categoria" [(ngModel)]="Producto.categoria" >
+      <ion-select-option *ngFor="let categoria of Categorias">{{categoria.nombre}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+ <!--<ion-item>
+    <ion-label>Estado: </ion-label>
+    <ion-select placeholder="Estado" value='Producto.estado'>
+      <ion-select-option value="Activo">Activo</ion-select-option>
+      <ion-select-option value="Inactivo">Inactivo</ion-select-option>
+    </ion-select>
+  </ion-item>
+  --> 
+  <ion-button (click)="agregar()" expand="block" >
+    Agregar
+  </ion-button>
+  <ion-button expand="block" color="danger" [routerLink]="['../administracion']" routerLinkActive="router-link-active" >
+    Cancelar
+  </ion-button>
+</ion-content>

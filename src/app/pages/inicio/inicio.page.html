@@ -1,0 +1,28 @@
+
+<ion-header  translucent>
+  <ion-toolbar color="primary" mode='ios'>
+    <ion-title class="ion-text-capitalize" >MOJI TOWN</ion-title>
+  </ion-toolbar>
+</ion-header>
+   
+ 
+  <ion-content color="dark"  mode='ios' >  
+  <app-promociones [routerLink]="['/contacto']" routerLinkActive="router-link-active" *ngIf="!busqueda"></app-promociones>
+
+   <ion-searchbar placeholder="Buscar..."  debounce='700'  
+   inputmode="text" (ionChange)='buscar($event)' style="color: #c4d105" ></ion-searchbar>
+
+    <app-spinner *ngIf="productos.length===0"></app-spinner>
+   <app-categorias  *ngIf=" !busqueda && productos.length!=0" [Productos]='productos' [Categorias]='Categorias'  ></app-categorias>
+   <app-spinner *ngIf="productosFiltrados.length===0 && busqueda"></app-spinner>
+   <app-productos *ngIf="busqueda"  [productos]='productosFiltrados' ></app-productos> 
+   <ion-label color="danger" style="text-align: center;"><h1>{{mensaje}}</h1></ion-label>
+   
+  </ion-content>
+  <ion-footer>
+    <ion-button routerLink="/carrito" routerLinkActive="router-link-active"  expand="block">
+      <ion-icon name="cart-outline" slot="start"> </ion-icon>
+    Productos Selecconados
+    </ion-button> 
+  </ion-footer>
+  

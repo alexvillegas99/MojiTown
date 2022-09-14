@@ -1,0 +1,30 @@
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.categoria{
+    background-color: rgba(0,0,0,0.8);
+    filter:brightness(0.4);
+}
+h1{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.texto-encima2{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+.mini{
+        height: 100px;
+        width: 100px;
+    
+}

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary" mode='ios'>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='../administracion'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Categoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+  <ion-label>Nombre: </ion-label>
+  <ion-input [(ngModel)]="Categoria.nombre" type="text" placeholder="Nombre" required></ion-input>
+</ion-item>
+<ion-item>
+
+<input style="left: 0px;" type="file" name="inputFile" (change)="chooseFile($event)" require>
+
+<!-- <ion-input [(ngModel)]="Categoria.imagen" type="text" placeholder="http://imagen"></ion-input>
+  --> 
+</ion-item>
+<ion-button (click)="agregar()" expand="block" >
+  Agregar
+</ion-button>
+<ion-button expand="block" color="danger" [routerLink]="['../administracion']" routerLinkActive="router-link-active" >
+  Cancelar
+</ion-button>
+</ion-content>

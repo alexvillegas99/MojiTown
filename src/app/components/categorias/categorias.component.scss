@@ -1,0 +1,19 @@
+    .centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ion-img{
+    background-color: rgba(0,0,0,0.8);
+    filter:brightness(0.4);
+    height:200px;
+}
+h1{
+    color: #c4d105;
+    font-weight: bold;
+    text-align: center;
+}
+ion-col{
+    padding:  0px 0px;
+}

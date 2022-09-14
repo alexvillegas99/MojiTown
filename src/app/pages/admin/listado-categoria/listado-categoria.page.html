@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar mode='ios' color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="../../administracion"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{categoria}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let producto of Productos | filtro:categoria:categoria " color="dark">
+    <ion-item color="dark">
+          <ion-img [src]="producto.imagen"></ion-img>
+      <ion-label  class="ion-text-end text-small">
+        <h2>Producto: {{producto.nombre}}</h2>
+        <h3>Descripción: {{producto.descripcion}}</h3>
+        <h3>Precio: ${{producto.precio}}</h3>
+        <ion-button (click)="actualizarStock(producto)" *ngIf="producto.estado" color="success" slot="end">Activo</ion-button>
+        <ion-button (click)="actualizarStock(producto)" *ngIf="!producto.estado" color="danger" slot="end">Inactivo</ion-button>
+        <ion-button (click)="editarProducto(producto.id)"  slot="end">Editar</ion-button>
+        <ion-button (click)="eliminarProducto(producto.id)" color="danger" slot="end">Eliminar</ion-button>
+      </ion-label>
+   </ion-item>
+  </ion-list>
+</ion-content>

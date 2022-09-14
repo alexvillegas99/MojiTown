@@ -1,0 +1,13 @@
+
+<ion-row>
+  <ion-col size-lg="3" size-md="4" size-sm='6' sizeXl='3' size="6" *ngFor="let producto of Productos | filtro:ca:Categoria">
+    <ion-card style="cursor: pointer" (click)="mostrarModal(producto)">
+      <img style="width: 100%; height: 200px" [src]="producto.imagen" />
+      <ion-card-header>
+        <ion-card-subtitle>${{producto.precio}}</ion-card-subtitle>
+        <h5 style="color:#c4d105  ">{{producto.nombre}}</h5>
+        <ion-card-subtitle *ngIf="producto.descripcion.length > 0">{{producto.descripcion}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,11 @@
+<!--<app-categoria [Productos]='Productos' [Categoria]='categoria' *ngFor="let categoria of Categorias"></app-categoria>-->
+  <ion-grid fixed >
+      <ion-row>
+          <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let categoria of Categorias; async">
+              <ion-card (click)="MostrarModal(categoria)" style=" cursor: pointer;"> 
+                  <ion-img [src]="categoria.imagen"></ion-img>
+                  <ion-label class="centrado" ><h1>{{categoria.nombre}}</h1></ion-label>
+              </ion-card>
+          </ion-col>
+      </ion-row>
+  </ion-grid>

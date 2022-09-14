@@ -1,0 +1,28 @@
+ion-item{
+    color: #c4d105;
+}
+
+ion-list-header{
+    color: #c4d105;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.cont{
+    text-align: center;
+}
+
+.contenedor2{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+ion-item{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+ion-content{
+--background:url('../../../assets/mojito2.jpg') 0 0/100% 100% no-repeat;
+}

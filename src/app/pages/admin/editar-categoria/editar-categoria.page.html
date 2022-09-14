@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar mode='ios'>
+    
+    <ion-title>Editar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre: </ion-label>
+    <ion-input [(ngModel)]="Categoria.nombre" type="text" placeholder="Nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Imagen Actual: </ion-label>
+    <ion-input [(ngModel)]="Categoria.imagen" type="text" placeholder="http://imagen" disabled></ion-input>
+   
+  </ion-item>
+  <ion-item>
+    <input style="left: 0px;" type="file" name="inputFile" (change)="chooseFile($event)" require>
+  </ion-item>
+  <ion-button (click)="editar()" expand="block" >
+    Editar
+  </ion-button>
+  <ion-button expand="block" color="danger" [routerLink]="['../../administracion']" routerLinkActive="router-link-active" >
+    Cancelar
+  </ion-button>
+</ion-content>

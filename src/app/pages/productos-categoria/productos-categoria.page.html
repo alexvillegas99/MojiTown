@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary" mode='ios'>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/' ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{categoria}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content mode='ios'>
+  
+<app-categoria [Productos]='Productos' [Categoria]='categoria' ></app-categoria>
+</ion-content>
+<ion-footer>
+  <ion-button routerLink="/carrito" routerLinkActive="router-link-active"  expand="block">
+    <ion-icon name="cart-outline" slot="start"> </ion-icon>
+  Productos Selecconados
+  </ion-button>
+</ion-footer>

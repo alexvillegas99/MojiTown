@@ -1,0 +1,43 @@
+<ion-header >
+  <ion-toolbar mode='ios' color="primary" style="text-align: center;">
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/carrito' routerLinkActive="router-link-active" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Finalizar Pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode='ios' class="ion-padding">
+  <ion-item>
+    <ion-label>Nombre: </ion-label>
+    <ion-input [(ngModel)]="nombre" type="text" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Forma de pago: </ion-label>
+    <ion-label>Efectivo </ion-label>
+  <!--   <ion-select placeholder="Efectivo" [(ngModel)]="FormaPago" >
+      <ion-select-option >Efectivo</ion-select-option>
+      <ion-select-option >Transferencia</ion-select-option>
+      <ion-select-option >Data Fast</ion-select-option>
+    </ion-select> -->
+ 
+  </ion-item>
+  <ion-item>
+    <ion-label>Número de mesa:  </ion-label>
+    <ion-input [(ngModel)]="mesa" type="text"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label>Comentario: </ion-label>
+    <ion-input [(ngModel)]="comentario" type="text" ></ion-input>
+  </ion-item>
+  <ion-button style="margin-top: 20px;" (click)="enviar()" expand="block" color="success">
+    Enviar
+  </ion-button>
+  <ion-button routerLink='/carrito'  color="danger" expand="block" >
+    Regresar
+  </ion-button>
+ 
+</ion-content>

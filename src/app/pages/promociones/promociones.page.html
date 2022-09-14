@@ -1,0 +1,28 @@
+
+<ion-header  translucent>
+  <ion-toolbar color="primary" mode='ios'>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/' routerLinkActive="router-link-active" ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" >Promociones</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+
+
+<ion-row>
+  <ion-col size-lg="3" size-md="4" size-sm='6' sizeXl='3' size="6" *ngFor="let producto of promociones">
+    <ion-card style="cursor: pointer" (click)="mostrarModal(producto)">
+      <img style="width: 100%; height: 200px" [src]="producto.imagen" />
+      <ion-card-header>
+        <ion-card-subtitle><span style=" text-decoration: line-through; color: darkgrey;">  &nbsp;&nbsp;&nbsp;${{producto.precio}}  </span></ion-card-subtitle>
+        <ion-card-subtitle>${{producto.preciop  }} </ion-card-subtitle>
+        <h5 style="color:#c4d105  ">{{producto.nombre}}</h5>
+      </ion-card-header>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+</ion-content>
+  
